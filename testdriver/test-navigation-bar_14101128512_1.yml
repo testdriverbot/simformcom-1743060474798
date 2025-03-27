@@ -1,0 +1,35 @@
+version: 4.2.25
+session: 67e500cb4dc25283aa086f9e
+steps:
+  - prompt: Click on "Services" in the navigation bar.
+    commands:
+      - command: hover-text
+        text: Services
+        description: services option in the navigation bar
+        action: click
+  - prompt: Assert that the drop-down menu is displayed.
+    commands:
+      - command: assert
+        expect: Digital Product Engineering is visible
+  - prompt: Click on a service category.
+    commands:
+      - command: hover-text
+        text: Digital Product Engineering
+        description: service category in the dropdown menu
+        action: click
+  - prompt: Assert that the relevant service page is loaded.
+    commands:
+      - command: assert
+        expect: >-
+          Delivering Product Engineering Objectives for Ambitious Product Teams
+          is visible
+  - prompt: Repeat for "Industries" and "Resources".
+    commands:
+      - command: hover-text
+        text: Industries
+        description: industries option in the navigation bar
+        action: click
+      - command: hover-text
+        text: Resources
+        description: resources option in the navigation bar
+        action: click
