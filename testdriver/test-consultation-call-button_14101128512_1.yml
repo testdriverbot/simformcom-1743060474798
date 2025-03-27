@@ -1,0 +1,13 @@
+version: 4.2.25
+session: 67e500cbf66458c067614876
+steps:
+  - prompt: Click on "Book A Consultation Call" button.
+    commands:
+      - command: hover-text
+        text: Book A Consultation Call
+        description: button to book a consultation call
+        action: click
+  - prompt: Assert that the consultation booking page loads successfully.
+    commands:
+      - command: assert
+        expect: the text "What will happen next?" is visible
